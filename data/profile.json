@@ -1,0 +1,22 @@
+{
+  "facts": {
+    "name": "Trang",
+    "job_experience": "Tôi từng làm ở nhiều công ty khác nhau trong 10 năm qua"
+  },
+  "_history": [
+    {
+      "ts": "2026-04-24T05:48:03",
+      "key": "name",
+      "old": null,
+      "new": "Trang",
+      "source": "llm_extractor"
+    },
+    {
+      "ts": "2026-04-24T05:48:13",
+      "key": "job_experience",
+      "old": null,
+      "new": "Tôi từng làm ở nhiều công ty khác nhau trong 10 năm qua",
+      "source": "llm_extractor"
+    }
+  ]
+}

@@ -1,0 +1,766 @@
+[
+  {
+    "scenario_id": 1,
+    "category": "profile_recall",
+    "title": "Recall user name after 6 turns",
+    "with_memory": false,
+    "probe_index": 6,
+    "probe_response": "Tên bạn là [tên của bạn].",
+    "probe_prompt_tokens": 25,
+    "pass": false,
+    "fail_reasons": [
+      "missing expected keyword(s): ['Linh']"
+    ],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Xin chào, tôi tên là Linh.",
+        "response": "Xin chào, Linh! Bạn có cần giúp gì không?",
+        "prompt_tokens": 19,
+        "latency_s": 1.24
+      },
+      {
+        "i": 1,
+        "user": "Hôm nay Hà Nội có mưa phùn.",
+        "response": "Cảm ơn bạn đã cập nhật! Hôm nay Hà Nội có mưa phùn.",
+        "prompt_tokens": 21,
+        "latency_s": 0.89
+      },
+      {
+        "i": 2,
+        "user": "Tôi đang học về agent memory.",
+        "response": "Tuyệt vời! Bạn đang tìm hiểu về bộ nhớ của agent. Bạn cần thông tin gì cụ thể về chủ đề này?",
+        "prompt_tokens": 17,
+        "latency_s": 0.89
+      },
+      {
+        "i": 3,
+        "user": "Bạn có thể giải thích RAG không?",
+        "response": "RAG (Retrieval-Augmented Generation) là một phương pháp trong lĩnh vực xử lý ngôn ngữ tự nhiên, kết hợp giữa việc truy xuất thông tin và sinh văn bản. Nó sử dụng một mô hình truy xuất để tìm kiếm thông tin từ một tập dữ liệu lớn, sau đó sử dụng mô hình sinh để tạo ra câu trả lời hoặc văn bản dựa trên thông tin đã truy xuất. Điều này giúp cải thiện độ chính xác và tính liên quan của các phản hồi trong các tác vụ như trả lời câu hỏi hoặc tóm tắt văn bản.",
+        "prompt_tokens": 19,
+        "latency_s": 2.77
+      },
+      {
+        "i": 4,
+        "user": "Cảm ơn, nghe có vẻ thú vị.",
+        "response": "Bạn có muốn biết thêm thông tin gì không?",
+        "prompt_tokens": 22,
+        "latency_s": 1.04
+      },
+      {
+        "i": 5,
+        "user": "Tôi sẽ thử cài LangGraph tối nay.",
+        "response": "Tuyệt vời! Chúc bạn cài đặt LangGraph thành công tối nay. Nếu cần trợ giúp, hãy cho tôi biết!",
+        "prompt_tokens": 22,
+        "latency_s": 1.02
+      },
+      {
+        "i": 6,
+        "user": "Nhắc lại giúp tôi: tên tôi là gì?",
+        "response": "Tên bạn là [tên của bạn].",
+        "prompt_tokens": 25,
+        "latency_s": 0.61
+      }
+    ]
+  },
+  {
+    "scenario_id": 1,
+    "category": "profile_recall",
+    "title": "Recall user name after 6 turns",
+    "with_memory": true,
+    "probe_index": 6,
+    "probe_response": "Tên bạn là Linh.",
+    "probe_prompt_tokens": 265,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Xin chào, tôi tên là Linh.",
+        "response": "Xin chào, Linh! Rất vui được gặp bạn. Có điều gì bạn muốn hỏi hoặc thảo luận không?",
+        "prompt_tokens": 180,
+        "latency_s": 2.44
+      },
+      {
+        "i": 1,
+        "user": "Hôm nay Hà Nội có mưa phùn.",
+        "response": "Cảm ơn bạn đã chia sẻ, Linh! Hôm nay Hà Nội có mưa phùn, hy vọng bạn giữ ấm và an toàn nhé. Nếu bạn cần thông tin gì khác, hãy cho tôi biết!",
+        "prompt_tokens": 243,
+        "latency_s": 3.33
+      },
+      {
+        "i": 2,
+        "user": "Tôi đang học về agent memory.",
+        "response": "Thật tuyệt khi bạn đang học về agent memory, Linh! Nếu bạn cần hỗ trợ hoặc có câu hỏi nào liên quan đến chủ đề này, hãy cho tôi biết nhé!",
+        "prompt_tokens": 248,
+        "latency_s": 3.54
+      },
+      {
+        "i": 3,
+        "user": "Bạn có thể giải thích RAG không?",
+        "response": "RAG, hay Retrieval-Augmented Generation, là một phương pháp trong trí tuệ nhân tạo kết hợp giữa việc truy xuất thông tin từ một cơ sở dữ liệu và sinh ra văn bản. Thay vì chỉ dựa vào mô hình ngôn ngữ để tạo ra câu trả lời, RAG tìm kiếm thông tin liên quan từ một nguồn bên ngoài và sử dụng nó để cải thiện độ chính xác và tính đầy đủ của câu trả lời. Nếu bạn cần thêm thông tin hoặc có câu hỏi cụ thể nào về RAG, hãy cho tôi biết nhé!",
+        "prompt_tokens": 222,
+        "latency_s": 4.76
+      },
+      {
+        "i": 4,
+        "user": "Cảm ơn, nghe có vẻ thú vị.",
+        "response": "Không có gì, Linh! Nếu bạn có thêm câu hỏi nào về RAG hoặc bất kỳ chủ đề nào khác, hãy cho tôi biết nhé!",
+        "prompt_tokens": 262,
+        "latency_s": 2.67
+      },
+      {
+        "i": 5,
+        "user": "Tôi sẽ thử cài LangGraph tối nay.",
+        "response": "Tuyệt vời, Linh! Chúc bạn cài đặt LangGraph thành công tối nay. Nếu bạn cần hỗ trợ gì, đừng ngần ngại hỏi nhé!",
+        "prompt_tokens": 262,
+        "latency_s": 2.96
+      },
+      {
+        "i": 6,
+        "user": "Nhắc lại giúp tôi: tên tôi là gì?",
+        "response": "Tên bạn là Linh.",
+        "prompt_tokens": 265,
+        "latency_s": 2.71
+      }
+    ]
+  },
+  {
+    "scenario_id": 2,
+    "category": "conflict_update",
+    "title": "Allergy correction (rubric mandatory)",
+    "with_memory": false,
+    "probe_index": 3,
+    "probe_response": "Tất nhiên! Bạn có thể thử làm món cơm chiên hải sản hoặc mì xào thập cẩm. Nếu bạn thích món ăn nhẹ, salad gà nướng cũng là một lựa chọn tuyệt vời. Bạn thích món nào hơn?",
+    "probe_prompt_tokens": 33,
+    "pass": false,
+    "fail_reasons": [
+      "missing expected keyword(s): ['đậu nành']"
+    ],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi tên Mai, tôi dị ứng sữa bò.",
+        "response": "Chào Mai! Bạn dị ứng với sữa bò. Nếu cần thêm thông tin hay hỗ trợ gì, hãy cho tôi biết nhé!",
+        "prompt_tokens": 26,
+        "latency_s": 1.03
+      },
+      {
+        "i": 1,
+        "user": "Hôm qua tôi uống trà sữa xong bị khó chịu.",
+        "response": "Có thể trà sữa đã gây khó chịu cho bạn. Bạn có thường xuyên uống trà sữa không?",
+        "prompt_tokens": 28,
+        "latency_s": 0.84
+      },
+      {
+        "i": 2,
+        "user": "À nhầm, tôi dị ứng đậu nành chứ không phải sữa bò.",
+        "response": "Cảm ơn bạn đã chỉnh sửa! Vậy bạn dị ứng đậu nành, không phải sữa bò.",
+        "prompt_tokens": 34,
+        "latency_s": 0.87
+      },
+      {
+        "i": 3,
+        "user": "Bạn gợi ý giúp tôi món ăn tối phù hợp được không?",
+        "response": "Tất nhiên! Bạn có thể thử làm món cơm chiên hải sản hoặc mì xào thập cẩm. Nếu bạn thích món ăn nhẹ, salad gà nướng cũng là một lựa chọn tuyệt vời. Bạn thích món nào hơn?",
+        "prompt_tokens": 33,
+        "latency_s": 1.65
+      }
+    ]
+  },
+  {
+    "scenario_id": 2,
+    "category": "conflict_update",
+    "title": "Allergy correction (rubric mandatory)",
+    "with_memory": true,
+    "probe_index": 3,
+    "probe_response": "Chắc chắn rồi, Mai! Vì bạn dị ứng với đậu nành, mình gợi ý bạn thử món gà nướng với rau củ. Bạn có thể ướp gà với các gia vị như tỏi, tiêu, và chanh để tăng hương vị. Kèm theo là một đĩa salad tươi ngon. Chúc bạn có bữa tối ngon miệng!",
+    "probe_prompt_tokens": 268,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi tên Mai, tôi dị ứng sữa bò.",
+        "response": "Chào Mai! Rất vui được biết bạn. Bạn dị ứng sữa bò, mình sẽ ghi nhớ điều này. Nếu bạn cần thông tin gì khác, hãy cho mình biết nhé!",
+        "prompt_tokens": 186,
+        "latency_s": 3.32
+      },
+      {
+        "i": 1,
+        "user": "Hôm qua tôi uống trà sữa xong bị khó chịu.",
+        "response": "Chào Mai! Rất tiếc khi nghe bạn bị khó chịu sau khi uống trà sữa. Có thể là do dị ứng với sữa bò. Nếu bạn cần hỗ trợ gì thêm, hãy cho mình biết nhé!",
+        "prompt_tokens": 276,
+        "latency_s": 4.38
+      },
+      {
+        "i": 2,
+        "user": "À nhầm, tôi dị ứng đậu nành chứ không phải sữa bò.",
+        "response": "Cảm ơn bạn đã cập nhật! Bây giờ mình biết bạn dị ứng với đậu nành. Nếu bạn cần hỗ trợ gì thêm, hãy cho mình biết nhé!",
+        "prompt_tokens": 270,
+        "latency_s": 3.88
+      },
+      {
+        "i": 3,
+        "user": "Bạn gợi ý giúp tôi món ăn tối phù hợp được không?",
+        "response": "Chắc chắn rồi, Mai! Vì bạn dị ứng với đậu nành, mình gợi ý bạn thử món gà nướng với rau củ. Bạn có thể ướp gà với các gia vị như tỏi, tiêu, và chanh để tăng hương vị. Kèm theo là một đĩa salad tươi ngon. Chúc bạn có bữa tối ngon miệng!",
+        "prompt_tokens": 268,
+        "latency_s": 5.08
+      }
+    ]
+  },
+  {
+    "scenario_id": 3,
+    "category": "episodic_recall",
+    "title": "Recall debug lesson about docker networking",
+    "with_memory": false,
+    "probe_index": 2,
+    "probe_response": "Bạn có thể xem lại các bước sau:\n\n1. **Kiểm tra kết nối mạng**: Đảm bảo rằng kết nối internet của bạn ổn định.\n2. **Xem lại cấu hình**: Kiểm tra lại các thiết lập hoặc cấu hình liên quan đến ứng dụng hoặc hệ thống bạn đang sử dụng.\n3. **Cập nhật phần mềm**: Đảm bảo rằng bạn đang sử dụng phiên bản mới nhất của phần mềm.\n4. **Xem log lỗi**: Nếu có, hãy kiểm tra log lỗi để tìm hiểu nguyên nhân cụ thể.\n5. **Khởi động lại**: Thử khởi động lại thiết bị hoặc ứng dụng để xem có khắc phục được vấn đề không.\n\nNếu vẫn gặp lỗi, bạn có thể cung cấp thêm thông tin chi tiết để tôi có thể hỗ trợ tốt hơn.",
+    "probe_prompt_tokens": 37,
+    "pass": false,
+    "fail_reasons": [
+      "missing expected keyword(s): ['service', 'docker', 'compose']"
+    ],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Hôm qua tôi debug được lỗi connection refused giữa 2 container docker.",
+        "response": "Tuyệt vời! Việc debug lỗi connection refused giữa hai container Docker có thể khá khó khăn. Bạn đã tìm ra nguyên nhân và cách khắc phục như thế nào?",
+        "prompt_tokens": 25,
+        "latency_s": 1.15
+      },
+      {
+        "i": 1,
+        "user": "Hóa ra cần dùng tên service trong docker-compose thay vì localhost.",
+        "response": "Đúng rồi! Khi sử dụng Docker Compose, bạn nên dùng tên service để kết nối giữa các container thay vì localhost. Tên service sẽ giúp các container nhận diện và giao tiếp với nhau trong cùng một mạng.",
+        "prompt_tokens": 24,
+        "latency_s": 1.36
+      },
+      {
+        "i": 2,
+        "user": "Bây giờ lại gặp lỗi tương tự, bạn gợi ý cho tôi xem lại gì?",
+        "response": "Bạn có thể xem lại các bước sau:\n\n1. **Kiểm tra kết nối mạng**: Đảm bảo rằng kết nối internet của bạn ổn định.\n2. **Xem lại cấu hình**: Kiểm tra lại các thiết lập hoặc cấu hình liên quan đến ứng dụng hoặc hệ thống bạn đang sử dụng.\n3. **Cập nhật phần mềm**: Đảm bảo rằng bạn đang sử dụng phiên bản mới nhất của phần mềm.\n4. **Xem log lỗi**: Nếu có, hãy kiểm tra log lỗi để tìm hiểu nguyên nhân cụ thể.\n5. **Khởi động lại**: Thử khởi động lại thiết bị hoặc ứng dụng để xem có khắc phục được vấn đề khô",
+        "prompt_tokens": 37,
+        "latency_s": 3.64
+      }
+    ]
+  },
+  {
+    "scenario_id": 3,
+    "category": "episodic_recall",
+    "title": "Recall debug lesson about docker networking",
+    "with_memory": true,
+    "probe_index": 2,
+    "probe_response": "Nếu bạn gặp lại lỗi connection refused giữa các container trong Docker, hãy kiểm tra những điều sau:\n\n1. **Tên Service**: Đảm bảo bạn đang sử dụng đúng tên service trong docker-compose thay vì localhost.\n2. **Cấu Hình Mạng**: Kiểm tra cấu hình mạng của các container để đảm bảo chúng có thể giao tiếp với nhau.\n3. **Port**: Đảm bảo rằng bạn đã mở đúng port trong docker-compose và rằng ứng dụng đang lắng nghe trên port đó.\n4. **Logs**: Kiểm tra logs của các container để tìm hiểu nguyên nhân cụ thể của lỗi.\n\nNếu bạn đã kiểm tra tất cả những điều này mà vẫn gặp lỗi, hãy cung cấp thêm thông tin để tôi có thể giúp bạn tốt hơn!",
+    "probe_prompt_tokens": 275,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Hôm qua tôi debug được lỗi connection refused giữa 2 container docker.",
+        "response": "Tuyệt vời! Việc debug lỗi connection refused giữa 2 container Docker có thể khá khó khăn. Bạn đã tìm ra nguyên nhân chưa?",
+        "prompt_tokens": 185,
+        "latency_s": 4.12
+      },
+      {
+        "i": 1,
+        "user": "Hóa ra cần dùng tên service trong docker-compose thay vì localhost.",
+        "response": "Đúng rồi! Bạn cần sử dụng tên service trong docker-compose thay vì localhost để giải quyết lỗi connection refused giữa các container. Rất tốt khi bạn đã tìm ra điều này!",
+        "prompt_tokens": 250,
+        "latency_s": 4.16
+      },
+      {
+        "i": 2,
+        "user": "Bây giờ lại gặp lỗi tương tự, bạn gợi ý cho tôi xem lại gì?",
+        "response": "Nếu bạn gặp lại lỗi connection refused giữa các container trong Docker, hãy kiểm tra những điều sau:\n\n1. **Tên Service**: Đảm bảo bạn đang sử dụng đúng tên service trong docker-compose thay vì localhost.\n2. **Cấu Hình Mạng**: Kiểm tra cấu hình mạng của các container để đảm bảo chúng có thể giao tiếp với nhau.\n3. **Port**: Đảm bảo rằng bạn đã mở đúng port trong docker-compose và rằng ứng dụng đang lắng nghe trên port đó.\n4. **Logs**: Kiểm tra logs của các container để tìm hiểu nguyên nhân cụ thể ",
+        "prompt_tokens": 275,
+        "latency_s": 6.25
+      }
+    ]
+  },
+  {
+    "scenario_id": 4,
+    "category": "semantic_retrieval",
+    "title": "Retrieve FAQ chunk about returns",
+    "with_memory": false,
+    "probe_index": 1,
+    "probe_response": "Nếu sản phẩm còn nguyên hộp, bạn thường có khoảng 14 đến 30 ngày để trả, tùy thuộc vào chính sách của từng cửa hàng. Hãy kiểm tra chính sách cụ thể của nơi bạn mua hàng để biết chính xác.",
+    "probe_prompt_tokens": 36,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi là khách mới, muốn hỏi về chính sách đổi trả.",
+        "response": "Chào bạn! Chính sách đổi trả thường khác nhau tùy vào từng cửa hàng hoặc trang web. Bạn có thể kiểm tra thông tin cụ thể trên trang web của cửa hàng hoặc liên hệ với bộ phận chăm sóc khách hàng để biết thêm chi tiết. Nếu bạn cần thông tin cụ thể hơn, hãy cho tôi biết!",
+        "prompt_tokens": 30,
+        "latency_s": 1.8
+      },
+      {
+        "i": 1,
+        "user": "Nếu sản phẩm còn nguyên hộp thì tôi có bao nhiêu ngày để trả?",
+        "response": "Nếu sản phẩm còn nguyên hộp, bạn thường có khoảng 14 đến 30 ngày để trả, tùy thuộc vào chính sách của từng cửa hàng. Hãy kiểm tra chính sách cụ thể của nơi bạn mua hàng để biết chính xác.",
+        "prompt_tokens": 36,
+        "latency_s": 1.17
+      }
+    ]
+  },
+  {
+    "scenario_id": 4,
+    "category": "semantic_retrieval",
+    "title": "Retrieve FAQ chunk about returns",
+    "with_memory": true,
+    "probe_index": 1,
+    "probe_response": "Nếu sản phẩm còn nguyên hộp, bạn có 30 ngày để trả lại và nhận hoàn tiền đầy đủ.",
+    "probe_prompt_tokens": 274,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi là khách mới, muốn hỏi về chính sách đổi trả.",
+        "response": "Chính sách đổi trả của chúng tôi cho phép khách hàng trả lại bất kỳ sản phẩm chưa sử dụng nào trong vòng 30 ngày kể từ ngày mua để được hoàn tiền đầy đủ. Đối với các sản phẩm điện tử đã mở, thời gian trả lại là 14 ngày.",
+        "prompt_tokens": 190,
+        "latency_s": 3.89
+      },
+      {
+        "i": 1,
+        "user": "Nếu sản phẩm còn nguyên hộp thì tôi có bao nhiêu ngày để trả?",
+        "response": "Nếu sản phẩm còn nguyên hộp, bạn có 30 ngày để trả lại và nhận hoàn tiền đầy đủ.",
+        "prompt_tokens": 274,
+        "latency_s": 3.68
+      }
+    ]
+  },
+  {
+    "scenario_id": 5,
+    "category": "semantic_retrieval",
+    "title": "Retrieve FAQ about password reset",
+    "with_memory": false,
+    "probe_index": 1,
+    "probe_response": "Để reset password, bạn thường làm theo các bước sau:\n\n1. Truy cập vào trang đăng nhập của dịch vụ bạn muốn reset password.\n2. Nhấn vào liên kết \"Quên mật khẩu?\" hoặc \"Reset password\".\n3. Nhập địa chỉ email hoặc tên đăng nhập của bạn.\n4. Kiểm tra email của bạn để nhận hướng dẫn reset password.\n5. Làm theo hướng dẫn trong email để tạo mật khẩu mới.\n\nNếu bạn cần thêm thông tin cụ thể về dịch vụ nào, hãy cho tôi biết!",
+    "probe_prompt_tokens": 17,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi quên mật khẩu đăng nhập.",
+        "response": "Bạn có thể sử dụng chức năng \"Quên mật khẩu?\" trên trang đăng nhập để nhận hướng dẫn đặt lại mật khẩu.",
+        "prompt_tokens": 17,
+        "latency_s": 1.15
+      },
+      {
+        "i": 1,
+        "user": "Làm cách nào để reset password?",
+        "response": "Để reset password, bạn thường làm theo các bước sau:\n\n1. Truy cập vào trang đăng nhập của dịch vụ bạn muốn reset password.\n2. Nhấn vào liên kết \"Quên mật khẩu?\" hoặc \"Reset password\".\n3. Nhập địa chỉ email hoặc tên đăng nhập của bạn.\n4. Kiểm tra email của bạn để nhận hướng dẫn reset password.\n5. Làm theo hướng dẫn trong email để tạo mật khẩu mới.\n\nNếu bạn cần thêm thông tin cụ thể về dịch vụ nào, hãy cho tôi biết!",
+        "prompt_tokens": 17,
+        "latency_s": 1.9
+      }
+    ]
+  },
+  {
+    "scenario_id": 5,
+    "category": "semantic_retrieval",
+    "title": "Retrieve FAQ about password reset",
+    "with_memory": true,
+    "probe_index": 1,
+    "probe_response": "Bạn có thể đặt lại mật khẩu bằng cách vào Cài đặt → Bảo mật → Đặt lại mật khẩu. Một liên kết đặt lại sẽ được gửi đến địa chỉ email đã đăng ký và sẽ hết hạn sau 15 phút.",
+    "probe_prompt_tokens": 255,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi quên mật khẩu đăng nhập.",
+        "response": "Bạn có thể đặt lại mật khẩu bằng cách vào Cài đặt → Bảo mật → Đặt lại mật khẩu. Một liên kết đặt lại sẽ được gửi đến địa chỉ email đã đăng ký và sẽ hết hạn sau 15 phút.",
+        "prompt_tokens": 177,
+        "latency_s": 3.48
+      },
+      {
+        "i": 1,
+        "user": "Làm cách nào để reset password?",
+        "response": "Bạn có thể đặt lại mật khẩu bằng cách vào Cài đặt → Bảo mật → Đặt lại mật khẩu. Một liên kết đặt lại sẽ được gửi đến địa chỉ email đã đăng ký và sẽ hết hạn sau 15 phút.",
+        "prompt_tokens": 255,
+        "latency_s": 3.62
+      }
+    ]
+  },
+  {
+    "scenario_id": 6,
+    "category": "profile_recall",
+    "title": "Preferred language after small talk",
+    "with_memory": false,
+    "probe_index": 3,
+    "probe_response": "Bạn muốn tôi tóm tắt cuộc trò chuyện bằng ngôn ngữ bạn thích. Hãy cho tôi biết ngôn ngữ đó là gì!",
+    "probe_prompt_tokens": 44,
+    "pass": false,
+    "fail_reasons": [
+      "missing expected keyword(s): ['Hà Nội', 'thời tiết']"
+    ],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Hi, my preferred language is Vietnamese.",
+        "response": "Chào bạn! Ngôn ngữ ưa thích của bạn là tiếng Việt. Có điều gì tôi có thể giúp bạn không?",
+        "prompt_tokens": 13,
+        "latency_s": 0.97
+      },
+      {
+        "i": 1,
+        "user": "Let's talk about the weather in Hanoi.",
+        "response": "Sure! What specific aspect of the weather in Hanoi would you like to discuss?",
+        "prompt_tokens": 15,
+        "latency_s": 0.89
+      },
+      {
+        "i": 2,
+        "user": "Rainy today, pretty cold.",
+        "response": "Stay warm and dry!",
+        "prompt_tokens": 12,
+        "latency_s": 0.52
+      },
+      {
+        "i": 3,
+        "user": "Câu hỏi tiếp theo: dùng ngôn ngữ tôi thích để tóm tắt cuộc trò chuyện.",
+        "response": "Bạn muốn tôi tóm tắt cuộc trò chuyện bằng ngôn ngữ bạn thích. Hãy cho tôi biết ngôn ngữ đó là gì!",
+        "prompt_tokens": 44,
+        "latency_s": 1.23
+      }
+    ]
+  },
+  {
+    "scenario_id": 6,
+    "category": "profile_recall",
+    "title": "Preferred language after small talk",
+    "with_memory": true,
+    "probe_index": 3,
+    "probe_response": "Hôm nay, Hà Nội có mưa và thời tiết khá lạnh. Nếu bạn cần thêm thông tin về thời tiết hoặc bất kỳ điều gì khác, hãy cho tôi biết nhé!",
+    "probe_prompt_tokens": 283,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Hi, my preferred language is Vietnamese.",
+        "response": "Chào bạn! Tôi sẽ trả lời bằng tiếng Việt từ bây giờ. Nếu bạn cần thông tin gì, hãy cho tôi biết nhé!",
+        "prompt_tokens": 173,
+        "latency_s": 2.79
+      },
+      {
+        "i": 1,
+        "user": "Let's talk about the weather in Hanoi.",
+        "response": "Thời tiết ở Hà Nội thường có sự thay đổi theo mùa. Mùa hè có thể nóng và ẩm, trong khi mùa đông thì lạnh và khô. Bạn có muốn biết thêm thông tin cụ thể về thời tiết hiện tại không?",
+        "prompt_tokens": 244,
+        "latency_s": 2.38
+      },
+      {
+        "i": 2,
+        "user": "Rainy today, pretty cold.",
+        "response": "Hôm nay Hà Nội có mưa và thời tiết khá lạnh. Nếu bạn cần thông tin cụ thể hơn về thời tiết hoặc dự báo trong những ngày tới, hãy cho tôi biết nhé!",
+        "prompt_tokens": 252,
+        "latency_s": 3.34
+      },
+      {
+        "i": 3,
+        "user": "Câu hỏi tiếp theo: dùng ngôn ngữ tôi thích để tóm tắt cuộc trò chuyện.",
+        "response": "Hôm nay, Hà Nội có mưa và thời tiết khá lạnh. Nếu bạn cần thêm thông tin về thời tiết hoặc bất kỳ điều gì khác, hãy cho tôi biết nhé!",
+        "prompt_tokens": 283,
+        "latency_s": 3.44
+      }
+    ]
+  },
+  {
+    "scenario_id": 7,
+    "category": "conflict_update",
+    "title": "Job role correction",
+    "with_memory": false,
+    "probe_index": 3,
+    "probe_response": "Xin lỗi, nhưng tôi không có thông tin về công việc hiện tại của bạn. Bạn có thể cho tôi biết để tôi cập nhật không?",
+    "probe_prompt_tokens": 18,
+    "pass": false,
+    "fail_reasons": [
+      "missing expected keyword(s): ['data']"
+    ],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi làm backend engineer tại một startup fintech.",
+        "response": "Bạn làm backend engineer tại một startup fintech.",
+        "prompt_tokens": 20,
+        "latency_s": 0.85
+      },
+      {
+        "i": 1,
+        "user": "Dự án hiện tại của tôi là một payment gateway.",
+        "response": "Dự án hiện tại của bạn là một payment gateway.",
+        "prompt_tokens": 23,
+        "latency_s": 0.8
+      },
+      {
+        "i": 2,
+        "user": "Thực ra tôi mới chuyển sang làm data engineer từ tuần trước.",
+        "response": "Cảm ơn bạn đã cập nhật! Vậy hiện tại bạn đang làm data engineer. Nếu cần hỗ trợ gì trong công việc mới, hãy cho tôi biết nhé!",
+        "prompt_tokens": 27,
+        "latency_s": 1.0
+      },
+      {
+        "i": 3,
+        "user": "Job hiện tại của tôi là gì?",
+        "response": "Xin lỗi, nhưng tôi không có thông tin về công việc hiện tại của bạn. Bạn có thể cho tôi biết để tôi cập nhật không?",
+        "prompt_tokens": 18,
+        "latency_s": 1.18
+      }
+    ]
+  },
+  {
+    "scenario_id": 7,
+    "category": "conflict_update",
+    "title": "Job role correction",
+    "with_memory": true,
+    "probe_index": 3,
+    "probe_response": "Job hiện tại của bạn là data engineer.",
+    "probe_prompt_tokens": 251,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi làm backend engineer tại một startup fintech.",
+        "response": "Bạn làm backend engineer tại một startup fintech.",
+        "prompt_tokens": 180,
+        "latency_s": 2.06
+      },
+      {
+        "i": 1,
+        "user": "Dự án hiện tại của tôi là một payment gateway.",
+        "response": "Dự án hiện tại của bạn là một payment gateway.",
+        "prompt_tokens": 225,
+        "latency_s": 3.11
+      },
+      {
+        "i": 2,
+        "user": "Thực ra tôi mới chuyển sang làm data engineer từ tuần trước.",
+        "response": "Bạn mới chuyển sang làm data engineer từ tuần trước.",
+        "prompt_tokens": 255,
+        "latency_s": 2.08
+      },
+      {
+        "i": 3,
+        "user": "Job hiện tại của tôi là gì?",
+        "response": "Job hiện tại của bạn là data engineer.",
+        "prompt_tokens": 251,
+        "latency_s": 2.45
+      }
+    ]
+  },
+  {
+    "scenario_id": 8,
+    "category": "episodic_recall",
+    "title": "Reuse previous outcome (shipping)",
+    "with_memory": false,
+    "probe_index": 1,
+    "probe_response": "Bạn có thể thử tìm kiếm các nguồn tài liệu trực tuyến hoặc sử dụng các ứng dụng hỗ trợ học tập để nhanh chóng nắm bắt kiến thức. Nếu cần, tôi có thể gợi ý một số công cụ hoặc phương pháp cụ thể hơn.",
+    "probe_prompt_tokens": 31,
+    "pass": false,
+    "fail_reasons": [
+      "missing expected keyword(s): ['express', 'next']"
+    ],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Lần trước tôi đặt hàng ở HCMC ngày 10, ngày 11 nhận được vì chọn express.",
+        "response": "Cảm ơn bạn đã chia sẻ! Bạn đã đặt hàng ở HCMC vào ngày 10 và nhận được vào ngày 11 nhờ chọn dịch vụ giao hàng nhanh.",
+        "prompt_tokens": 40,
+        "latency_s": 1.14
+      },
+      {
+        "i": 1,
+        "user": "Kỳ này tôi lại cần gấp, có cách nào tương tự không?",
+        "response": "Bạn có thể thử tìm kiếm các nguồn tài liệu trực tuyến hoặc sử dụng các ứng dụng hỗ trợ học tập để nhanh chóng nắm bắt kiến thức. Nếu cần, tôi có thể gợi ý một số công cụ hoặc phương pháp cụ thể hơn.",
+        "prompt_tokens": 31,
+        "latency_s": 1.15
+      }
+    ]
+  },
+  {
+    "scenario_id": 8,
+    "category": "episodic_recall",
+    "title": "Reuse previous outcome (shipping)",
+    "with_memory": true,
+    "probe_index": 1,
+    "probe_response": "Bạn có thể chọn dịch vụ giao hàng express như lần trước. Nếu đặt hàng trước 14:00, bạn sẽ nhận được vào ngày hôm sau.",
+    "probe_prompt_tokens": 269,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Lần trước tôi đặt hàng ở HCMC ngày 10, ngày 11 nhận được vì chọn express.",
+        "response": "Bạn đã đặt hàng ở HCMC ngày 10 và nhận được vào ngày 11 nhờ chọn dịch vụ giao hàng express.",
+        "prompt_tokens": 200,
+        "latency_s": 4.22
+      },
+      {
+        "i": 1,
+        "user": "Kỳ này tôi lại cần gấp, có cách nào tương tự không?",
+        "response": "Bạn có thể chọn dịch vụ giao hàng express như lần trước. Nếu đặt hàng trước 14:00, bạn sẽ nhận được vào ngày hôm sau.",
+        "prompt_tokens": 269,
+        "latency_s": 3.5
+      }
+    ]
+  },
+  {
+    "scenario_id": 9,
+    "category": "semantic_retrieval",
+    "title": "Python asyncio behavior",
+    "with_memory": false,
+    "probe_index": 1,
+    "probe_response": "Khi bạn gọi `asyncio.gather` và một coroutine gặp lỗi, các coroutine còn lại sẽ vẫn tiếp tục chạy. Tuy nhiên, `asyncio.gather` sẽ trả về một ngoại lệ cho coroutine đầu tiên gặp lỗi, và các coroutine còn lại sẽ không được hoàn thành. Nếu bạn muốn thu thập kết quả của tất cả các coroutine, bạn có thể sử dụng tham số `return_exceptions=True`, điều này sẽ cho phép `gather` trả về ngoại lệ như là một kết quả thay vì dừng lại.",
+    "probe_prompt_tokens": 31,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi đang học asyncio.",
+        "response": "Tuyệt vời! Học asyncio sẽ giúp bạn xử lý các tác vụ bất đồng bộ trong Python hiệu quả hơn. Bạn có câu hỏi cụ thể nào về asyncio không?",
+        "prompt_tokens": 14,
+        "latency_s": 1.2
+      },
+      {
+        "i": 1,
+        "user": "Khi gọi asyncio.gather mà một coroutine lỗi thì các coroutine còn lại sao?",
+        "response": "Khi bạn gọi `asyncio.gather` và một coroutine gặp lỗi, các coroutine còn lại sẽ vẫn tiếp tục chạy. Tuy nhiên, `asyncio.gather` sẽ trả về một ngoại lệ cho coroutine đầu tiên gặp lỗi, và các coroutine còn lại sẽ không được hoàn thành. Nếu bạn muốn thu thập kết quả của tất cả các coroutine, bạn có thể sử dụng tham số `return_exceptions=True`, điều này sẽ cho phép `gather` trả về ngoại lệ như là một kết quả thay vì dừng lại.",
+        "prompt_tokens": 31,
+        "latency_s": 2.5
+      }
+    ]
+  },
+  {
+    "scenario_id": 9,
+    "category": "semantic_retrieval",
+    "title": "Python asyncio behavior",
+    "with_memory": true,
+    "probe_index": 1,
+    "probe_response": "Khi gọi `asyncio.gather`, nếu một coroutine gặp lỗi, các coroutine còn lại vẫn tiếp tục chạy trừ khi bạn đặt `return_exceptions=False` (mặc định là True).",
+    "probe_prompt_tokens": 263,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi đang học asyncio.",
+        "response": "Tốt quá! Nếu bạn có câu hỏi nào về asyncio, hãy cho tôi biết. Bạn đã biết rằng `asyncio.gather` chạy các coroutine song song chưa?",
+        "prompt_tokens": 174,
+        "latency_s": 3.11
+      },
+      {
+        "i": 1,
+        "user": "Khi gọi asyncio.gather mà một coroutine lỗi thì các coroutine còn lại sao?",
+        "response": "Khi gọi `asyncio.gather`, nếu một coroutine gặp lỗi, các coroutine còn lại vẫn tiếp tục chạy trừ khi bạn đặt `return_exceptions=False` (mặc định là True).",
+        "prompt_tokens": 263,
+        "latency_s": 5.36
+      }
+    ]
+  },
+  {
+    "scenario_id": 10,
+    "category": "trim_budget",
+    "title": "Token budget: recall name after very long chat",
+    "with_memory": false,
+    "probe_index": 4,
+    "probe_response": "Tên bạn là gì?",
+    "probe_prompt_tokens": 20,
+    "pass": false,
+    "fail_reasons": [
+      "missing expected keyword(s): ['Trang']"
+    ],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi tên Trang, rất vui gặp bạn.",
+        "response": "Rất vui được gặp bạn, Trang!",
+        "prompt_tokens": 22,
+        "latency_s": 0.91
+      },
+      {
+        "i": 1,
+        "user": "Để tôi kể: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit",
+        "response": "Có vẻ như bạn đang chia sẻ một đoạn văn mẫu. Bạn có muốn thảo luận về một chủ đề cụ thể nào không?",
+        "prompt_tokens": 254,
+        "latency_s": 1.12
+      },
+      {
+        "i": 2,
+        "user": "Và một đoạn dài nữa: Phân tích chi tiết dự án A có rất nhiều số liệu dài dòng. Phân tích chi tiết dự án A có rất nhiều số liệu dài dòng. Phân tích chi tiết dự án A có rất nhiều số liệu dài dòng. Phân ",
+        "response": "Có vẻ như bạn đang nhấn mạnh về việc phân tích chi tiết dự án A với nhiều số liệu dài dòng. Bạn cần thông tin cụ thể nào hơn về dự án này?",
+        "prompt_tokens": 799,
+        "latency_s": 1.07
+      },
+      {
+        "i": 3,
+        "user": "Thêm background: Tôi từng làm ở nhiều công ty khác nhau trong 10 năm qua. Tôi từng làm ở nhiều công ty khác nhau trong 10 năm qua. Tôi từng làm ở nhiều công ty khác nhau trong 10 năm qua. Tôi từng làm",
+        "response": "Bạn đã làm việc ở nhiều công ty khác nhau trong 10 năm qua.",
+        "prompt_tokens": 660,
+        "latency_s": 0.78
+      },
+      {
+        "i": 4,
+        "user": "Bây giờ: tên tôi là gì?",
+        "response": "Tên bạn là gì?",
+        "prompt_tokens": 20,
+        "latency_s": 0.56
+      }
+    ]
+  },
+  {
+    "scenario_id": 10,
+    "category": "trim_budget",
+    "title": "Token budget: recall name after very long chat",
+    "with_memory": true,
+    "probe_index": 4,
+    "probe_response": "Tên bạn là Trang.",
+    "probe_prompt_tokens": 290,
+    "pass": true,
+    "fail_reasons": [],
+    "turns": [
+      {
+        "i": 0,
+        "user": "Tôi tên Trang, rất vui gặp bạn.",
+        "response": "Rất vui được gặp bạn, Trang! Nếu bạn cần bất kỳ thông tin nào, hãy cho tôi biết nhé.",
+        "prompt_tokens": 182,
+        "latency_s": 3.12
+      },
+      {
+        "i": 1,
+        "user": "Để tôi kể: Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit",
+        "response": "Có vẻ như bạn đang chia sẻ một đoạn văn dài. Nếu bạn cần thảo luận về điều gì cụ thể hoặc có câu hỏi nào, hãy cho tôi biết nhé, Trang!",
+        "prompt_tokens": 478,
+        "latency_s": 2.82
+      },
+      {
+        "i": 2,
+        "user": "Và một đoạn dài nữa: Phân tích chi tiết dự án A có rất nhiều số liệu dài dòng. Phân tích chi tiết dự án A có rất nhiều số liệu dài dòng. Phân tích chi tiết dự án A có rất nhiều số liệu dài dòng. Phân ",
+        "response": "Có vẻ như bạn đang gặp khó khăn với việc phân tích chi tiết dự án A. Nếu bạn cần hỗ trợ cụ thể hoặc có câu hỏi nào về số liệu, hãy cho tôi biết nhé, Trang!",
+        "prompt_tokens": 1038,
+        "latency_s": 3.34
+      },
+      {
+        "i": 3,
+        "user": "Thêm background: Tôi từng làm ở nhiều công ty khác nhau trong 10 năm qua. Tôi từng làm ở nhiều công ty khác nhau trong 10 năm qua. Tôi từng làm ở nhiều công ty khác nhau trong 10 năm qua. Tôi từng làm",
+        "response": "Cảm ơn bạn đã cung cấp thêm thông tin! Tôi đã ghi nhận rằng bạn từng làm ở nhiều công ty khác nhau trong 10 năm qua. Nếu bạn cần hỗ trợ gì liên quan đến kinh nghiệm làm việc hoặc dự án A, hãy cho tôi biết nhé!",
+        "prompt_tokens": 899,
+        "latency_s": 4.17
+      },
+      {
+        "i": 4,
+        "user": "Bây giờ: tên tôi là gì?",
+        "response": "Tên bạn là Trang.",
+        "prompt_tokens": 290,
+        "latency_s": 2.36
+      }
+    ]
+  }
+]
